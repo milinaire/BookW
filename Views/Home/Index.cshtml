@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+    <div class="container-fluid row" id="main-storage">
+        @*<div class="container col-lg-3 col-md-6 col-sm-12 border book-element" value="-1000">
+            <div class="container px-0 mt-3">
+                <button class="btn btn-outline-danger float-right delete-btn" value="-1000">X</button>
+                <h4>Name:</h4>
+            </div>
+            <div class="text-body">
+                <p>Description:</p>
+                <p>Author:</p>
+                <p class="small">Pages:</p>
+            </div>
+        </div>*@
+    </div>
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Add a book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="#NameInput">Name</label>
+                        <input type="text" class="form-control bookSubmit" id="NameInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="#IdInput">ISBN</label>
+                        <input type="number" class="form-control bookSubmit" id="IdInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="#DescriptionInput">Description</label>
+                        <textarea class="form-control bookSubmit" id="DescriptionInput"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="#AuthorInput">Author</label>
+                        <input type="text" class="form-control bookSubmit" id="AuthorInput">
+                    </div>
+                    <div class="form-group">
+                        <label for="#PagesInput">Pages</label>
+                        <input type="number" class="form-control bookSubmit" id="PagesInput">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-success" id="SubmitBook">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
